@@ -52,7 +52,7 @@ namespace LinqExercise
             Console.WriteLine();
 
             Console.WriteLine("Employees older than 26(by age):");
-            employees.Where(x => x.Age > 26).OrderBy(x => x.Age).ToList().ForEach(x => Console.WriteLine(x.FullName));  //TODO: Print all the employees' FullName and Age who are over the age 26 to the console and order this by Age first and then by FirstName in the same result.
+            employees.Where(x => x.Age > 26).OrderBy(x => x.Age).ThenBy(x => x.FirstName).ToList().ForEach(x => Console.WriteLine(x.FullName));  //TODO: Print all the employees' FullName and Age who are over the age 26 to the console and order this by Age first and then by FirstName in the same result.
             Console.WriteLine();
 
             Console.Write("Sum of YOE for employees with more than 10 YOE: ");
